@@ -258,7 +258,7 @@ class main_frame():
 		self.knock=PhotoImage(file = 'D:\\Scripting\\Scripting_files\\copycat_data\\images\\knock.png')
 		self.canvas.create_image(190, 34, image=self.knock)
 		self.step=90
-		self.textvaraible=["Hi Mams,","This is an small GUI developed for you by your papa.It will help you to prepare notes","while reading newspaper or bla bla bla"]
+		self.textvaraible=["Hi All,","This is an small GUI developed by me.It will help you to prepare notes","while reading newspaper or bla bla bla"]
 		for i in range(0,3):
 			canvas_id = self.canvas.create_text(40,self.step, anchor="nw",font="Cambria 14   ")
 			self.canvas.itemconfig(canvas_id, text=self.textvaraible[i])
@@ -277,22 +277,22 @@ class main_frame():
 			
 		#document path
 		canvas_id = self.canvas.create_text(20,500, anchor="nw",font="Cambria 12   ",fill="blue")
-		self.canvas.itemconfig(canvas_id, text="ஆவணம் சேமிக்கும் இடம் : ")
+		self.canvas.itemconfig(canvas_id, text="Document path : ")
 		self.entry=Entry(self.canvas,width=50,bd=4)
 		self.canvas.create_window(430,510,window=self.entry)
-		self.button=Button(self.canvas,text="உலாவ",command=lambda:self.openfile(),width=10,height=1)
+		self.button=Button(self.canvas,text="Browse",command=lambda:self.openfile(),width=10,height=1)
 		self.canvas.create_window(650,509,window=self.button)
 		
 		#document name
 		canvas_id = self.canvas.create_text(20,550, anchor="nw",font="Cambria 12   ",fill="blue")
-		self.canvas.itemconfig(canvas_id, text="ஆவணத்தின் பெயர் : ")
+		self.canvas.itemconfig(canvas_id, text="Document Name : ")
 		self.entry_name=Entry(self.canvas,width=30,bd=4)
 		self.canvas.create_window(380,560,window=self.entry_name)
 		document_name=self.entry_name.get()
 		
 		#document format
 		canvas_id = self.canvas.create_text(20,610, anchor="nw",font="Cambria 12   ",fill="blue")
-		self.canvas.itemconfig(canvas_id, text="ஆவணத்தின் வடிவம் : ")
+		self.canvas.itemconfig(canvas_id, text="Document format : ")
 		self.textvaraible=["PDF","DOC"]
 		self.step1=300
 		self.step2=330
